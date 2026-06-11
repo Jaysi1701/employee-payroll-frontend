@@ -1,13 +1,13 @@
 class EmployeePayrollData {
 
     constructor() {
-        this._name = "";
-        this._profilePic = "";
-        this._gender = "";
+        this._name = '';
+        this._profilePic = '';
+        this._gender = '';
         this._department = [];
         this._salary = 0;
-        this._note = "";
-        this._startDate = "";
+        this._note = '';
+        this._startDate = '';
     }
 
     get name() {
@@ -20,7 +20,7 @@ class EmployeePayrollData {
         if (nameRegex.test(name))
             this._name = name;
         else
-            throw "Name is Incorrect";
+            throw 'Name is Incorrect';
     }
 
     get profilePic() {
@@ -72,14 +72,23 @@ class EmployeePayrollData {
     }
 
     toString() {
-        return (
-            "Name=" + this.name +
-            ", Profile Pic=" + this.profilePic +
-            ", Gender=" + this.gender +
-            ", Department=" + this.department +
-            ", Salary=" + this.salary +
-            ", Note=" + this.note +
-            ", Start Date=" + this.startDate
-        );
+
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+
+        const empDate =
+            !this.startDate ? 'undefined'
+                : new Date(Date.parse(this.startDate)).toLocaleDateString('en-US', options);
+
+        return "Name = " + this.name +
+            ", Profile Pic = " + this.profilePic +
+            ", Gender = " + this.gender +
+            ", Department = " + this.department +
+            ", Salary = " + this.salary +
+            ", Note = " + this.note +
+            ", Start Date = " + empDate;
     }
 }

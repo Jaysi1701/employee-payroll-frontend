@@ -1,27 +1,45 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
 }
 
-.form{
+.form {
     width: 60%;
-    margin: auto;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
 }
 
-.row-content{
+.row-content {
     margin: 15px 0;
 }
 
-.label{
+.label {
     display: inline-block;
     width: 120px;
 }
 
-.text-error{
+.input {
+    padding: 6px;
+    width: 250px;
+}
+
+.text-error {
     color: red;
     margin-left: 10px;
 }
 
-#salary-output{
-    margin-left: 10px;
+#salary-output {
+    margin-left: 15px;
     font-weight: bold;
+}
+
+.buttonParent {
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    margin-right: 10px;
 }

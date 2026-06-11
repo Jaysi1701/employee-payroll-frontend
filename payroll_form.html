@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>Employee Payroll Form</title>
 
     <link rel="stylesheet" href="./css/payroll.css">
@@ -14,83 +15,54 @@
     <h2>Employee Payroll Form</h2>
 
     <div class="row-content">
-
-        <label class="label text">
-            Name
-        </label>
+        <label class="label">Name</label>
 
         <input type="text"
                id="name"
                class="input">
 
-        <error-output class="text-error">
-        </error-output>
-
+        <error-output class="text-error"></error-output>
     </div>
 
     <div class="row-content">
 
-        <label class="label text">
+        <label class="label">
             Profile Image
         </label>
 
-        <input type="radio"
-               name="profile"
-               value="1.png">1
-
-        <input type="radio"
-               name="profile"
-               value="2.png">2
-
-        <input type="radio"
-               name="profile"
-               value="3.png">3
+        <input type="radio" name="profile" value="1.png">1
+        <input type="radio" name="profile" value="2.png">2
+        <input type="radio" name="profile" value="3.png">3
 
     </div>
 
     <div class="row-content">
 
-        <label class="label text">
+        <label class="label">
             Gender
         </label>
 
-        <input type="radio"
-               name="gender"
-               value="Male">Male
-
-        <input type="radio"
-               name="gender"
-               value="Female">Female
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
 
     </div>
 
     <div class="row-content">
 
-        <label class="label text">
+        <label class="label">
             Department
         </label>
 
-        <input type="checkbox"
-               name="department"
-               value="HR">HR
-
-        <input type="checkbox"
-               name="department"
-               value="Sales">Sales
-
-        <input type="checkbox"
-               name="department"
-               value="Finance">Finance
-
-        <input type="checkbox"
-               name="department"
-               value="Engineer">Engineer
+        <input type="checkbox" name="department" value="HR">HR
+        <input type="checkbox" name="department" value="Sales">Sales
+        <input type="checkbox" name="department" value="Finance">Finance
+        <input type="checkbox" name="department" value="Engineer">Engineer
 
     </div>
 
     <div class="row-content">
 
-        <label class="label text">
+        <label class="label">
             Salary
         </label>
 
@@ -108,7 +80,7 @@
 
     <div class="row-content">
 
-        <label class="label text">
+        <label class="label">
             Notes
         </label>
 
@@ -118,7 +90,7 @@
 
     <div class="row-content">
 
-        <label class="label text">
+        <label class="label">
             Start Date
         </label>
 
@@ -141,9 +113,17 @@
 
     </div>
 
-    <button type="submit">
-        Submit
-    </button>
+    <div class="buttonParent">
+
+        <button type="submit">
+            Submit
+        </button>
+
+        <button type="button" onclick="resetForm()">
+            Reset
+        </button>
+
+    </div>
 
 </form>
 

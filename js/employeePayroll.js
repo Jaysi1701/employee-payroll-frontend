@@ -79,9 +79,9 @@ class EmployeePayrollData {
             day: 'numeric'
         };
 
-        const empDate =
-            !this.startDate ? "undefined" :
-            new Date(Date.parse(this.startDate))
+        const empDate = !this.startDate
+            ? "undefined"
+            : new Date(Date.parse(this.startDate))
                 .toLocaleDateString("en-US", options);
 
         return "Name = " + this.name +

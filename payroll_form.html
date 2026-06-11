@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Payroll Form</title>
+    <link rel="stylesheet" href="./css/payroll.css">
+</head>
+
+<body>
+
+    <form class="form">
+
+        <h2>Employee Payroll Form</h2>
+
+        <div class="row-content">
+
+            <label class="label text">
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                class="input">
+
+            <error-output class="text-error">
+            </error-output>
+
+        </div>
+
+        <div class="row-content">
+
+            <label class="label text">
+                Salary
+            </label>
+
+            <input
+                type="range"
+                id="salary"
+                min="300000"
+                max="500000"
+                value="400000">
+
+            <output id="salary-output">
+                400000
+            </output>
+
+        </div>
+
+    </form>
+
+    <script src="./js/payroll-form.js"></script>
+
+</body>
+</html>

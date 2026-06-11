@@ -1,85 +1,32 @@
-class EmployeePayrollData {
+window.addEventListener('DOMContentLoaded', () => {
 
-    constructor() {
-        this._name = "";
-        this._profilePic = "";
-        this._gender = "";
-        this._department = [];
-        this._salary = 0;
-        this._note = "";
-        this._startDate = "";
-    }
+    const name = document.querySelector('#name');
 
-    get name() {
-        return this._name;
-    }
+    name.addEventListener('input', function () {
 
-    set name(name) {
-        let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
+        const nameRegex =
+            RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
 
-        if (nameRegex.test(name))
-            this._name = name;
+        if (nameRegex.test(name.value))
+            document.querySelector('.text-error').textContent = "";
+
         else
-            throw "Name is Incorrect";
-    }
+            document.querySelector('.text-error').textContent =
+                "Name is Incorrect";
+    });
 
-    get profilePic() {
-        return this._profilePic;
-    }
+    const salary =
+        document.querySelector('#salary');
 
-    set profilePic(profilePic) {
-        this._profilePic = profilePic;
-    }
+    const output =
+        document.querySelector('#salary-output');
 
-    get gender() {
-        return this._gender;
-    }
+    output.textContent =
+        salary.value;
 
-    set gender(gender) {
-        this._gender = gender;
-    }
+    salary.addEventListener('input', function () {
 
-    get department() {
-        return this._department;
-    }
-
-    set department(department) {
-        this._department = department;
-    }
-
-    get salary() {
-        return this._salary;
-    }
-
-    set salary(salary) {
-        this._salary = salary;
-    }
-
-    get note() {
-        return this._note;
-    }
-
-    set note(note) {
-        this._note = note;
-    }
-
-    get startDate() {
-        return this._startDate;
-    }
-
-    set startDate(startDate) {
-        this._startDate = startDate;
-    }
-
-    toString() {
-        return (
-            "Name=" + this.name +
-            ", Profile Pic=" + this.profilePic +
-            ", Gender=" + this.gender +
-            ", Department=" + this.department +
-            ", Salary=" + this.salary +
-            ", Note=" + this.note +
-            ", Start Date=" + this.startDate
-        );
-    }
-}
+        output.textContent =
+            salary.value;
+    });
+});

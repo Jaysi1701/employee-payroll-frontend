@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form{
+    width: 60%;
+    margin: auto;
+}
+
+.row-content{
+    margin: 15px 0;
+}
+
+.label{
+    display: inline-block;
+    width: 120px;
+}
+
+.text-error{
+    color: red;
+    margin-left: 10px;
+}
+
+#salary-output{
+    margin-left: 10px;
+    font-weight: bold;
+}

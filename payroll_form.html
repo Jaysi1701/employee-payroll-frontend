@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Payroll Form</title>
+
+    <link rel="stylesheet" href="./css/payroll.css">
+</head>
+
+<body>
+
+<form class="form" onsubmit="save(event)">
+
+    <h2>Employee Payroll Form</h2>
+
+    <div class="row-content">
+
+        <label class="label text">
+            Name
+        </label>
+
+        <input type="text"
+               id="name"
+               class="input">
+
+        <error-output class="text-error">
+        </error-output>
+
+    </div>
+
+    <div class="row-content">
+
+        <label class="label text">
+            Profile Image
+        </label>
+
+        <input type="radio"
+               name="profile"
+               value="1.png">1
+
+        <input type="radio"
+               name="profile"
+               value="2.png">2
+
+        <input type="radio"
+               name="profile"
+               value="3.png">3
+
+    </div>
+
+    <div class="row-content">
+
+        <label class="label text">
+            Gender
+        </label>
+
+        <input type="radio"
+               name="gender"
+               value="Male">Male
+
+        <input type="radio"
+               name="gender"
+               value="Female">Female
+
+    </div>
+
+    <div class="row-content">
+
+        <label class="label text">
+            Department
+        </label>
+
+        <input type="checkbox"
+               name="department"
+               value="HR">HR
+
+        <input type="checkbox"
+               name="department"
+               value="Sales">Sales
+
+        <input type="checkbox"
+               name="department"
+               value="Finance">Finance
+
+        <input type="checkbox"
+               name="department"
+               value="Engineer">Engineer
+
+    </div>
+
+    <div class="row-content">
+
+        <label class="label text">
+            Salary
+        </label>
+
+        <input type="range"
+               id="salary"
+               min="300000"
+               max="500000"
+               value="400000">
+
+        <output id="salary-output">
+            400000
+        </output>
+
+    </div>
+
+    <div class="row-content">
+
+        <label class="label text">
+            Notes
+        </label>
+
+        <textarea id="notes"></textarea>
+
+    </div>
+
+    <div class="row-content">
+
+        <label class="label text">
+            Start Date
+        </label>
+
+        <select id="day">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+
+        <select id="month">
+            <option>Jan</option>
+            <option>Feb</option>
+            <option>Mar</option>
+        </select>
+
+        <select id="year">
+            <option>2024</option>
+            <option>2025</option>
+        </select>
+
+    </div>
+
+    <button type="submit">
+        Submit
+    </button>
+
+</form>
+
+<script src="./js/employeePayroll.js"></script>
+<script src="./js/payroll-form.js"></script>
+
+</body>
+</html>
